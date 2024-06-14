@@ -10,7 +10,7 @@
 <body>
     <div class="container">
     <h1>Jogos</h1>
-    <a href="/jogos/insert" class="btn btn-primary">Novo Livro</a>  
+    <a href="/jogos/insert" class="btn btn-primary">Novo Jogo</a>  
     <table class="table">
         <tr>
             <th>Id</th>
