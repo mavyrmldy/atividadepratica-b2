@@ -25,6 +25,7 @@
             </select>
         </div>
 
+
         <br/>
         <a href="jogos/list" class="btn btn-primary">Voltar </a>
         <button type="submit" class="btn btn-success">Salvar</button>

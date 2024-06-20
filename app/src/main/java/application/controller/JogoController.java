@@ -39,13 +39,14 @@ public class JogoController {
     ) {
         Optional<Genero> resultGenero = generoRepo.findById(generoId);
         if(resultGenero.isPresent()) {
-            Jogo livro = new Jogo();
-            livro.setTitulo(titulo);
-            livro.setGenero(resultGenero.get());
-            jogoRepo.save(livro);
-            // Adicione uma mensagem de sucesso, se necessário
+            Jogo jogo = new Jogo();
+            jogo.setTitulo(titulo);
+            jogo.setGenero(resultGenero.get());
+            jogo.setMultiplayer((byte) 1);
+            jogoRepo.save(jogo);
+            // 
         } else {
-            // Adicione uma mensagem de erro, se necessário
+            // 
         }
         return "redirect:/jogos/list";
     }
@@ -75,9 +76,9 @@ public class JogoController {
                 jogo.setTitulo(titulo);
                 jogo.setGenero(resultGenero.get());
                 jogoRepo.save(jogo);
-                // Adicione uma mensagem de sucesso, se necessário
+                //
             } else {
-                // Adicione uma mensagem de erro, se necessário
+                // 
             }
         }
         return "redirect:/jogo/list";
@@ -98,9 +99,9 @@ public class JogoController {
         Optional<Jogo> resultJogo = jogoRepo.findById(id);
         if(resultJogo.isPresent()) {
             jogoRepo.deleteById(id);
-            // Adicione uma mensagem de sucesso, se necessário
+            // 
         } else {
-            // Adicione uma mensagem de erro, se necessário
+            //
         }
         return "redirect:/jogos/list";
     }

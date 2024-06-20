@@ -21,6 +21,8 @@ public class Jogo {
     @ManyToOne
     @JoinColumn(name = "id_genero", nullable = false)
     private Genero genero;
+    @Column(nullable = false)
+    private byte multiplayer; 
  
    
     public long getId() {
@@ -40,6 +42,13 @@ public class Jogo {
     }
     public void setGenero(Genero genero) {
         this.genero = genero;
+    }
+    public byte getMultiplayer() {
+        return multiplayer;
+    }
+
+    public void setMultiplayer(byte multiplayer) {
+        this.multiplayer = multiplayer;
     }
  
 }
